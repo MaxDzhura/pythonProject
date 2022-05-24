@@ -26,12 +26,12 @@ else:
     print(f"{v} - Этот год  высокосный!")
 
 
- # Треугольник
+ # Треугольник 
 
 a = int(input("A = "))
 b = int(input("B = "))
 c = int(input("C = "))
-if (a + b) > c:
+if (a + b) > c and (b + c) > a and (a + c) > b:
     print("Треугольник существует")
 else:
     print("Треугольника нет")
