@@ -19,13 +19,16 @@ for i in geometric_progress(2, 500):
 # знаете, что это - генератор.
 
 
-def range_analog(start, stop, step):
-    while start <= stop:
+ddef range_analog(start, stop=None, step=1):
+    if stop is None:
+        stop = start
+        start = 0
+
+    while start < stop:
         yield start
         start += step
-    return
 
-for i in range_analog(5, 25, 2):
+for i in range_analog(10,50,2):
     print(i, end=' ')
 
 
